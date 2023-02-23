@@ -1,15 +1,14 @@
-import {Header} from './Components/Header'
-import {Main} from './Components/Main'
-import {Footer} from './Components/Footer'
+import Footer from "./Components/Footer";
+import { Main } from "./Components/Main";
+import "./index.css";
 
-function App(){
-  return(
-    <div>
-      <Header />
+export function App() {
+  return (
+    <div className="flex flex-col mt-10 text-center items-center">
       <Main />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
