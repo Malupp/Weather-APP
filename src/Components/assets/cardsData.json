@@ -1,0 +1,59 @@
+[
+    {
+      "day": "Lun",
+      "icon": "faSun",
+      "condition": "Chiaro",
+      "highTemp": "34°",
+      "lowTemp": "27°",
+      "bgColor": "#e0f8fb"
+    },
+    {
+      "day": "Mar",
+      "icon": "faCloudSun",
+      "condition": "Nuvoloso",
+      "highTemp": "30°",
+      "lowTemp": "24°",
+      "bgColor": "#f7fafc"
+    },
+    {
+      "day": "Mer",
+      "icon": "faCloudRain",
+      "condition": "Piovoso",
+      "highTemp": "22°",
+      "lowTemp": "18°",
+      "bgColor": "#dce4ec"
+    },
+    {
+      "day": "Gio",
+      "icon": "faBolt",
+      "condition": "Temporale",
+      "highTemp": "26°",
+      "lowTemp": "20°",
+      "bgColor": "#edf2f7"
+    },
+    {
+      "day": "Ven",
+      "icon": "faSnowflake",
+      "condition": "Neve",
+      "highTemp": "0°",
+      "lowTemp": "-4°",
+      "bgColor": "#e2e8f0"
+    },
+    {
+      "day": "Sab",
+      "icon": "faSmog",
+      "condition": "Nebbia",
+      "highTemp": "12°",
+      "lowTemp": "8°",
+      "bgColor": "#e0f8fb"
+    },
+    {
+      "day": "Dom",
+      "icon": "faCloudShowersHeavy",
+      "condition": "Forti piogge",
+      "highTemp": "28°",
+      "lowTemp": "22°",
+      "bgColor": "#f7fafc"
+    }
+
+]
