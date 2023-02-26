@@ -11,7 +11,8 @@ import { useState } from "react";
 import ExpandMainCard from "./ExpandMainCard";
 
 export function MainCard() {
-  const [expand, setExpand] = useState(false);
+  const [expand, setExpand] = useState(false); 
+  {/* State used to expand main card in mobile version */}
 
   const MainCardExpand = () => {
     setExpand(!expand);
@@ -21,7 +22,7 @@ export function MainCard() {
       {/* Left side */}
       <div className="mb-4 text-center flex flex-col">
         <h1 className="text-3xl mt-4">Nome città</h1>
-        <div className="flex  items-center gap-2 mt-4">
+        <div className="flex items-center gap-2 mt-4">
           <FontAwesomeIcon
             className="hidden md:flex text-8xl text-orange-500"
             icon={faSun}
