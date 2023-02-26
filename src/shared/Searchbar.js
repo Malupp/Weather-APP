@@ -1,6 +1,6 @@
 import {useState} from "react"
 import { Temporaneo } from "./Temporaneo"
-import { useWeather } from "./useWeather"
+import { useWeather } from "../hooks/useWeather"
 
 export function Searchbar(){
     const [city, setCity] = useState()
@@ -18,5 +18,6 @@ export function Searchbar(){
                 </button>
             </div>
             <Temporaneo weather={weather}/>
+        </div>
     )
 }

@@ -1,6 +1,7 @@
-import Footer from "./Components/Footer";
-import { Main } from "./Components/Main";
-import "./index.css";
+import { Footer } from "./components/Footer";
+import { Main } from "./components/Main";
+import { Header } from "./components/Header"
+import "./assets/index.css";
 
 export function App() {
   return (

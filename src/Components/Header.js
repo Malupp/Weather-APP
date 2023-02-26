@@ -1,6 +1,6 @@
 import {useState} from "react"
-import { Temporaneo } from "./shared/Temporaneo"
-import { useWeather } from "./shared/useWeather"
+import { Temporaneo } from "../shared/Temporaneo"
+import { useWeather } from "../hooks/useWeather"
 
 export function Header(){
     const [city, setCity] = useState()
@@ -20,3 +20,5 @@ export function Header(){
         </div>
     )
 }
+
+export default Header

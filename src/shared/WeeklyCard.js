@@ -10,7 +10,7 @@ import {
   faCloudSun,
   faCloudRain,
 } from "@fortawesome/free-solid-svg-icons";
-import cardsData from "../assets/cardsData.json";
+import cardsData from "../data/cardsData.json";
 
 function WeeklyCard() {
   const icons = {

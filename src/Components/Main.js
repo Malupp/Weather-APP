@@ -1,4 +1,4 @@
-import MainCard from "./shared/MainCard"
+import MainCard from "../shared/MainCard"
 
 export function Main(){
     return(

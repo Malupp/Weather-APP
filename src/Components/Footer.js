@@ -1,6 +1,6 @@
-import WeeklyCard from "./shared/WeeklyCard";
+import WeeklyCard from "../shared/WeeklyCard";
 
-function Footer() {
+export function Footer() {
 
   return (
     <div className="flex flex-col mt-10 items-center ">
