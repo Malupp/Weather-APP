@@ -2,14 +2,12 @@ import {Header} from './Components/Header'
 import {Main} from './Components/Main'
 import {Footer} from './Components/Footer'
 
-function App(){
+export function App(){
   return(
     <div>
-      <Header />
-      <Main />
-      <Footer />
+      <Header/>
+      {/* <Main />
+      <Footer /> */}
     </div>
   )
 }
-
-export default App
