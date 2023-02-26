@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .border-card {
+        @apply border-2 border-[#e0f8fb] border-solid rounded-lg 
+    }
+}

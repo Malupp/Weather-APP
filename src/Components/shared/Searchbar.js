@@ -18,6 +18,5 @@ export function Searchbar(){
                 </button>
             </div>
             <Temporaneo weather={weather}/>
-        </div>
     )
 }
