@@ -5,7 +5,9 @@ import {
   faTemperatureDown,
   faWind,
 } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
 function ExpandMainCard() {
+  const weather = useSelector(state => state.weather)
   return (
     <div>
       <div className="md:hidden flex mb-4 flex-col">
@@ -15,17 +17,17 @@ function ExpandMainCard() {
             className="text-red-600"
             icon={faTemperatureArrowUp}
           />
-          <h2>34°</h2>
+          {weather?.tempMax && <h2>{weather.tempMax}°</h2>}
           <FontAwesomeIcon className="text-blue-600" icon={faTemperatureDown} />
-          <h2>27°</h2>
+          {weather?.tempMin && <h2>{weather.tempMin}°</h2>}
         </div>
         <div className="flex justify-center items-center mt-4 gap-1">
           <FontAwesomeIcon className="text-cyan-500" icon={faDroplet} />
-          <h1 className="text-2xl">Umidità:</h1>
+          {weather?.humidity && <h1 className="text-2xl">Umidità: {weather.humidity}</h1>}
         </div>
         <div className="flex justify-center items-center mt-4 gap-1">
           <FontAwesomeIcon icon={faWind} />
-          <h1 className="text-2xl">Vento:</h1>
+          {weather?.wind && <h1 className="text-2xl">Vento: {weather.wind}</h1>}
         </div>
       </div>
     </div>

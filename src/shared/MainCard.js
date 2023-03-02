@@ -3,17 +3,19 @@ import {
   faCaretDown,
   faDroplet,
   faSun,
+  faCloud,
   faTemperatureArrowUp,
   faTemperatureDown,
   faWind,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import ExpandMainCard from "./ExpandMainCard";
+import { useSelector } from "react-redux";
 
 export function MainCard() {
-  const [expand, setExpand] = useState(false); 
+  const [expand, setExpand] = useState(false);
   {/* State used to expand main card in mobile version */}
-
+  const weather = useSelector(state => state.weather)
   const MainCardExpand = () => {
     setExpand(!expand);
   };
@@ -21,15 +23,15 @@ export function MainCard() {
     <div className="border-card min-h-fit w-80 md:w-10/12 shadow-lg flex justify-center md:justify-evenly items-center mt-2">
       {/* Left side */}
       <div className="mb-4 text-center flex flex-col">
-        <h1 className="text-3xl mt-4">Nome città</h1>
+        {weather?.city && <h1 className="text-3xl mt-4">{weather.city}</h1>}
         <div className="flex items-center gap-2 mt-4">
-          <FontAwesomeIcon
-            className="hidden md:flex text-8xl text-orange-500"
-            icon={faSun}
-          />
-          <h1 className="text-8xl">34°C</h1>
+          {weather && <FontAwesomeIcon
+            className="md:flex text-8xl text-orange-500"
+            icon={weather.weather? faSun : faCloud}
+          />}
+          {weather?.temperature && <h1 className="text-8xl">{weather.temperature}</h1>}
         </div>
-        <h1 className="text-xl mt-4">Nuvoloso</h1>
+        {weather?.weather && <h1 className="text-xl mt-4">{weather.weather}</h1>}
         {/* Read more */}
         <div className="flex flex-col mt-4 md:hidden">
           <p className={expand? "hidden" : "visible"}>
@@ -42,7 +44,7 @@ export function MainCard() {
             <FontAwesomeIcon className="text-4xl md-hidden" icon={faCaretDown} />
           </button>
         </div>
-        {expand && <ExpandMainCard />}
+        {expand && <ExpandMainCard weather={weather} />}
       </div>
       {/* Right side */}
       <div>
@@ -53,20 +55,20 @@ export function MainCard() {
               className="text-red-600"
               icon={faTemperatureArrowUp}
             />
-            <h2>34°</h2>
+            {weather?.tempMax && <h2>{weather.tempMax}°</h2>}
             <FontAwesomeIcon
               className="text-blue-600"
               icon={faTemperatureDown}
             />
-            <h2>27°</h2>
+            {weather?.tempMin && <h2>{weather.tempMin}°</h2>}
           </div>
           <div className="flex justify-center items-center mt-4 gap-1">
             <FontAwesomeIcon className="text-cyan-500" icon={faDroplet} />
-            <h1 className="text-2xl">Umidità:</h1>
+            {weather?.humidity && <h1 className="text-2xl">Umidità: {weather.humidity}%</h1>}
           </div>
           <div className="flex justify-center items-center mt-4 gap-1">
             <FontAwesomeIcon icon={faWind} />
-            <h1 className="text-2xl">Vento:</h1>
+            {weather?.wind && <h1 className="text-2xl">Vento: {weather.wind} Km/h</h1>}
           </div>
         </div>
       </div>

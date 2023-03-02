@@ -11,8 +11,10 @@ import {
   faCloudRain,
 } from "@fortawesome/free-solid-svg-icons";
 import cardsData from "../data/cardsData.json";
+import { useSelector } from "react-redux";
 
 function WeeklyCard() {
+  const weather = useSelector(state => state.weather)
   const icons = {
     faSun,
     faCloudSun,
@@ -23,7 +25,7 @@ function WeeklyCard() {
     faCloudShowersHeavy,
   };
   return (
-    <div className="flex md:flex-row flex-col flex-wrap">
+    <div className="flex md:flex-row flex-col flex-wrap justify-center">
       {/* single card component */}
       {cardsData.map((card) => (
         <div
