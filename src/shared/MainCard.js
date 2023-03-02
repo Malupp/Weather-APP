@@ -49,7 +49,6 @@ export function MainCard() {
       {/* Right side */}
       <div>
         <div className="hidden md:flex mb-4 flex-col">
-          <h1 className="text-2xl">Percepito:</h1>
           <div className="flex text-2xl justify-center items-center mt-4 gap-1">
             <FontAwesomeIcon
               className="text-red-600"
