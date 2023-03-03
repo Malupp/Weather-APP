@@ -26,7 +26,7 @@ $ Run Yarn start to start the development server.
 Note: You may use npm instead of yarn if you prefer. Just replace yarn with npm in the above instructions.
 
 ## Credits
-This app was created by Malupp and SantinoDiGennaro. Feel free to contribute to the project by creating a pull request or reporting any issues you encounter.
+This app was created by <a href="https://www.linkedin.com/in/manuel-luppino/">Manuel Luppino</a> and <a href="https://www.linkedin.com/in/santino-di-gennaro/">Santino Di Gennaro</a>. Feel free to contribute to the project by creating a pull request or reporting any issues you encounter.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
