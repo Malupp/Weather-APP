@@ -1,6 +1,6 @@
-import { Footer } from "./components/Footer";
-import { Main } from "./components/Main";
-import { Header } from "./components/Header";
+import { Footer } from "./Components/Footer";
+import { Main } from "./Components/Main";
+import { Header } from "./Components/Header";
 import "./assets/index.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
