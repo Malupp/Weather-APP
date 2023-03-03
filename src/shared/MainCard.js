@@ -34,7 +34,7 @@ export function MainCard() {
   /*Using Redux to pass data from store to main card */
   const weather = useSelector((state) => state.weather);
   return (
-    <div className="border-card min-h-fit w-80 md:w-10/12 shadow-lg flex justify-center md:justify-evenly items-center mt-2 bg-[#e0f8fb]">
+    <div className="border-card min-h-fit w-72 md:w-10/12 shadow-lg flex justify-center md:justify-evenly items-center mt-2 bg-[#e0f8fb]">
       {/* Left side */}
       <div className="mb-4 text-center flex flex-col">
         {weather?.city && <h1 className="text-3xl mt-4">{weather.city}</h1>}
@@ -75,7 +75,7 @@ export function MainCard() {
           <div className="flex text-2xl justify-center items-center mt-4 gap-1">
             {weather?.feelsLike && (
               <h2>
-                Percepito: {" "}
+                Feels Like: {" "}
                 <FontAwesomeIcon
                   className="text-orange-500"
                   icon={faTemperatureHalf}
@@ -99,13 +99,13 @@ export function MainCard() {
           <div className="flex justify-center items-center mt-4 gap-1">
             <FontAwesomeIcon className="text-cyan-500" icon={faDroplet} />
             {weather?.humidity && (
-              <h1 className="text-2xl">Umidità: {weather.humidity}%</h1>
+              <h1 className="text-2xl">Humidity: {weather.humidity}%</h1>
             )}
           </div>
           <div className="flex justify-center items-center mt-4 gap-1">
             <FontAwesomeIcon icon={faWind} />
             {weather?.wind && (
-              <h1 className="text-2xl">Vento: {weather.wind} Km/h</h1>
+              <h1 className="text-2xl">Wind: {weather.wind} Km/h</h1>
             )}
           </div>
         </div>

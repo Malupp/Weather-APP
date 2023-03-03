@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import moment from 'moment';
 
 function WeeklyCard() {
   const [week, setWeek] = useState([]);
@@ -32,6 +33,7 @@ function WeeklyCard() {
       if (el.dt_txt.slice(11, 13) === "18") {
         newWeek.push({
           day: el.dt_txt.slice(8, 10),
+          nameDay: moment(el.dt_txt).format('dddd'),
           hour: el.dt_txt.slice(11, 13),
           tempMax: Math.round(el.main.temp_max - 273.15),
           tempMin: Math.round(el.main.temp_min - 273.15),
@@ -52,7 +54,7 @@ function WeeklyCard() {
           className="border-card mx-6 my-6 h-40 w-40 shadow-lg  justify-center items-center hover:scale-125 bg-[#e0f8fb]"
         >
           <div className="text-center">
-            <h1 className="text-sm mb-4">{card.day}</h1>
+            <h1 className="text-sm mb-4">{card.nameDay}</h1>
             <FontAwesomeIcon
               className="text-3xl text-orange-500"
               icon={icons[card.weather]}

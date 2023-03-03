@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'sprinkle': "url('../assets/Sprinkle.svg')",
+      },
+    },
   },
   plugins: [],
-}
+};
+
