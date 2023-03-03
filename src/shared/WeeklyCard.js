@@ -1,31 +1,26 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSun,
-  faTemperatureArrowUp,
-  faTemperatureDown,
-  faBolt,
   faSnowflake,
   faSmog,
-  faCloudShowersHeavy,
   faCloudSun,
   faCloudRain,
+  faTemperatureHalf,
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
 function WeeklyCard() {
-  const [week, setWeek] = useState([])
+  const [week, setWeek] = useState([]);
 
-  const weekly = useSelector(state => state.weekly)
+  const weekly = useSelector((state) => state.weekly);
 
   const icons = {
-    faSun,
-    faCloudSun,
-    faCloudRain,
-    faBolt,
-    faSnowflake,
-    faSmog,
-    faCloudShowersHeavy,
+    Clear: faSun,
+    Clouds: faCloudSun,
+    Rain: faCloudRain,
+    Snow: faSnowflake,
+    Mist: faSmog,
   };
 
   useEffect(() => {
@@ -57,23 +52,18 @@ function WeeklyCard() {
           className="border-card mx-6 my-6 h-40 w-40 shadow-lg  justify-center items-center hover:scale-125 bg-[#e0f8fb]"
         >
           <div className="text-center">
-            {/* <h1 className="text-sm mb-4">{card.day}</h1>
+            <h1 className="text-sm mb-4">{card.day}</h1>
             <FontAwesomeIcon
               className="text-3xl text-orange-500"
-              icon={icons[card.icon]}
-            /> */}
+              icon={icons[card.weather]}
+            />
             <h2 className=" mt-4">{card.weather}</h2>
             <div className="flex text-2xl justify-center items-center mt-4 gap-1">
               <FontAwesomeIcon
-                className="text-red-600"
-                icon={faTemperatureArrowUp}
+                className="text-orange-500"
+                icon={faTemperatureHalf}
               />
-              <h2>{card.tempMax}</h2>
-              <FontAwesomeIcon
-                className="text-blue-600"
-                icon={faTemperatureDown}
-              />
-              <h2>{card.tempMin}</h2>
+              <h2>{card.tempMax}°</h2>
             </div>
           </div>
         </div>

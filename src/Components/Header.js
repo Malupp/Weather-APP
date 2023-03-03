@@ -2,7 +2,7 @@ import { Searchbar } from "../shared/Searchbar"
 
 export function Header(){
     return (
-        <div>
+        <div className="mt-10">
             <Searchbar />
         </div>
     )
