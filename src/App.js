@@ -1,4 +1,4 @@
-import { Footer } from "./components/Footer";
+import { Footer } from "/src/components/Footer";
 import { Main } from "./components/Main";
 import { Header } from "./components/Header";
 import "./assets/index.css";
